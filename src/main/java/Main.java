@@ -18,10 +18,14 @@ public class Main {
         cats[1] = catTwo;
         cats[2] = catThree;
 
+        testBowl(cats, bowl);
+
+    }
+
+    public static void testBowl(Cat[] cats, Bowl bowl) {
         for (Cat value : cats) {
             if (value.toEat(bowl)) System.out.println("Кошка наелась");
             else System.out.println("Покормите кота");
         }
-
     }
 }
