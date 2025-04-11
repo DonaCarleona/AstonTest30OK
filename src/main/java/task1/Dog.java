@@ -1,3 +1,5 @@
+package task1;
+
 public class Dog extends Animal{
 
     public void toRun(int distance) {

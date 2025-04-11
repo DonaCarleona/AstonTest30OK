@@ -1,3 +1,11 @@
+import task1.Bowl;
+import task1.Cat;
+import task1.Dog;
+import task2.Circle;
+import task2.Figure;
+import task2.Rectangle;
+import task2.Square;
+
 public class Main {
     public static void main(String[] args) {
         Cat cat = new Cat(10);
@@ -20,6 +28,12 @@ public class Main {
 
         testBowl(cats, bowl);
 
+        Circle circle = new Circle(10,"Синий", "Красный");
+        circle.print();
+        Rectangle rectangle = new Rectangle(10,20, "Зеленый", "Желтый");
+        rectangle.print();
+        Square square = new Square(20, "Оранжевый", "Черный");
+        square.print();
     }
 
     public static void testBowl(Cat[] cats, Bowl bowl) {
@@ -28,4 +42,5 @@ public class Main {
             else System.out.println("Покормите кота");
         }
     }
+
 }

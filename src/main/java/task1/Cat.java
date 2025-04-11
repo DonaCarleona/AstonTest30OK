@@ -1,3 +1,5 @@
+package task1;
+
 public class Cat extends Animal{
 
     int satiety;
