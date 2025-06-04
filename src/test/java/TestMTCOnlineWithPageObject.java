@@ -1,4 +1,5 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.*;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -32,6 +33,11 @@ public class TestMTCOnlineWithPageObject {
 
 
     @Test
+    @Feature("Задание номер 1")
+    @Severity(SeverityLevel.MINOR)
+    @Link("http://test.com")
+    @Issue("https://test.com")
+    @DisplayName("Проверка наименование формы")
     public void mtcLabelTest() {
         Assertions.assertEquals("Онлайн пополнение\n" +
                 "без комиссии", mtcPageObject.getLabel());
@@ -39,11 +45,21 @@ public class TestMTCOnlineWithPageObject {
     }
 
     @Test
+    @Feature("Задание номер 1")
+    @Severity(SeverityLevel.MINOR)
+    @Link("http://test.com")
+    @Issue("https://test.com")
+    @DisplayName("Проверка наличия партнеров")
     public void mtcPartnerTest() {
         Assertions.assertEquals(5, mtcPageObject.getPartnerSize());
     }
 
     @Test
+    @Feature("Задание номер 1")
+    @Severity(SeverityLevel.MINOR)
+    @Link("http://test.com")
+    @Issue("https://test.com")
+    @DisplayName("Проверка перехода")
     public void mtcClickTest() {
         mtcPageObject.clickLinkInfo();
 
@@ -52,26 +68,51 @@ public class TestMTCOnlineWithPageObject {
     }
 
     @Test
+    @Feature("Задание номер 1")
+    @Severity(SeverityLevel.CRITICAL)
+    @Link("http://test.com")
+    @Issue("https://test.com")
+    @DisplayName("Проверка формы подключения")
     public void testWordConnection() throws InterruptedException {
         mtcPageObject.testConnectionForm();
     }
 
     @Test
+    @Feature("Задание номер 1")
+    @Severity(SeverityLevel.CRITICAL)
+    @Link("http://test.com")
+    @Issue("https://test.com")
+    @DisplayName("Проверка формы подключения к Интернету")
     public void testWordInternet() throws InterruptedException {
         mtcPageObject.testInternetForm();
     }
 
     @Test
+    @Feature("Задание номер 1")
+    @Severity(SeverityLevel.MINOR)
+    @Link("http://test.com")
+    @Issue("https://test.com")
+    @DisplayName("Проверка формы подключения продления")
     public void testWordInstallment() throws InterruptedException {
         mtcPageObject.testInstallmentForm();
     }
 
     @Test
+    @Feature("Задание номер 1")
+    @Severity(SeverityLevel.MINOR)
+    @Link("http://test.com")
+    @Issue("https://test.com")
+    @DisplayName("Проверка формы подключения оплаты")
     public void testWordToPay() throws InterruptedException {
         mtcPageObject.testToPayForm();
     }
 
     @Test
+    @Feature("Задание номер 2")
+    @Severity(SeverityLevel.BLOCKER)
+    @Link("http://test.com")
+    @Issue("https://test.com")
+    @DisplayName("Проверка формы оплаты")
     public void testPaymentForm() throws InterruptedException {
         mtcPageObject.fillConnectForm();
 
